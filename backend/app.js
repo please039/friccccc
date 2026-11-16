@@ -39,7 +39,7 @@ app.use((req, res, next) => {
 const authRoutes = require("./routes/auth");
 app.use("/", authRoutes);
 
-const productRoutes = require("./routes/products");
+const productRoutes = require("./routes/Products");
 app.use("/products", productRoutes);
 
 const orderRoutes = require("./routes/orders");

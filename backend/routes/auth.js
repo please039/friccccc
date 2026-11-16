@@ -154,4 +154,8 @@ router.get("/shop", requireLogin, (req, res) => {
     res.sendFile(path.join(__dirname, "../../shop.html"));
 });
 
+router.get("/shop.html", requireLogin, (req, res) => {
+    res.sendFile(path.join(__dirname, "../../shop.html"));
+});
+
 module.exports = router;

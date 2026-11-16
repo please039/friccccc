@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/assets/firc.png.avif" type="image/svg+xml">
+    <link rel="stylesheet" href="/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/cs.css">
+
+    <title>Fricshop.com</title>
+
+    <style>
+        /* Floating Cart Icon */
+        .floating-cart {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .floating-cart:hover {
+            transform: scale(1.1);
+            background-color: #eeeeee;
+        }
+
+        @media (max-width: 576px) {
+            .floating-cart {
+                right: 18px;
+                bottom: 18px;
+                width: 54px;
+                height: 54px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="content-wrap">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative py-4">
+
+        <div class="container">
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/shop">SHOP</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dropupdates.html">DROP UPDATES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/orderfaq.html">ORDERS FAQS</a>
+                    </li>
+
+                </ul>
+
+                <!-- Login / Signup -->
+                <ul class="navbar-nav" id="authMenu">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">LOGIN</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">SIGN UP</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Logo -->
+            <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="/">
+                <img src="/assets/firc.png.avif"
+                    alt="Fricshop Logo"
+                    width="150"
+                    height="75">
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- MINIBAR -->
+    <div class="bg-dark text-white text-center py-2">
+        International orders may be subject to local customs duties or import taxes upon delivery.
+    </div>
+
+    <!-- SHOP TITLE -->
+    <div class="shop-title-wrap">
+        <h1 class="shop-title">SHOP</h1>
+    </div>
+
+    <!-- PRODUCTS FROM MONGODB -->
+    <div class="shop-section" id="product">
+        <p id="loading">Loading products...</p>
+    </div>
+
+</main>
+
+<!-- FLOATING CART ICON -->
+<a href="/cart.html" class="floating-cart" aria-label="Shopping Cart">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+
+    </svg>
+
+</a>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-white">Fricshop</h5>
+                <p class="text-white">
+                    Made With love by Dric & The community
+                </p>
+            </div>
+
+            <!-- Menu -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-white">Menu</h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="/" class="text-white text-decoration-none">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/shop" class="text-white text-decoration-none">Shop</a>
+                    </li>
+
+                    <li>
+                        <a href="/dropupdates.html" class="text-white text-decoration-none">Drop Updates</a>
+                    </li>
+
+                    <li>
+                        <a href="/orderfaq.html" class="text-white text-decoration-none">Orders FAQs</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-white">Contact</h5>
+
+                <p class="text-white">
+                    Email: support@fricshop.com
+                </p>
+
+                <div>
+                    <a href="https://www.instagram.com/fric_thefrog/?hl=en"
+                        class="text-white me-3">
+                        Instagram
+                    </a>
+
+                    <a href="https://www.tiktok.com/@fric_thefrog"
+                        class="text-white">
+                        TikTok
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-light">
+
+        <p class="text-center mb-0 text-white">
+            2026 Fricshop.com All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="/vendor/bootstrap.bundle.min.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/products.js"></script>
+
+</body>
+</html>

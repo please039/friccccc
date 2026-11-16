@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/cs.css">
+    <title>Add Product - Fricshop</title>
+</head>
+<body>
+
+<main class="content-wrap">
+
+    <div class="container py-5">
+
+        <h1 class="text-center mb-4">ADD PRODUCT</h1>
+
+        <div class="card mx-auto" style="max-width: 600px;">
+            <div class="card-body">
+
+                <form id="addProductForm">
+
+                    <div class="mb-3">
+                        <label class="form-label">Product Name</label>
+                        <input type="text" id="productName"
+                               class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea id="productDescription"
+                                  class="form-control" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Price</label>
+                        <input type="number" id="productPrice"
+                               class="form-control" min="0" required>
+                    </div>
+                    <div class="mb-3">
+                     <label class="form-label">Stock</label>
+                        <input type="number" id="productStock"
+                          class="form-control" min="0" value="10" required>
+                         </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Image URL</label>
+                        <input type="text" id="productImage"
+                               class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <input type="text" id="productCategory"
+                               class="form-control" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark w-100">
+                        ADD PRODUCT
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="./vendor/bootstrap.bundle.min.js"></script>
+<script src="/js/add-product.js"></script>
+
+</body>
+</html>

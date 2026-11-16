@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./assets/firc.png.avif" type="image/svg+xml">
+<link rel="stylesheet" href="./vendor/bootstrap.min.css">
+<link rel="stylesheet" href="./css/cs.css">
+<title>Fricshop.com</title>
+</head>
+<body>
+
+<main class="content-wrap">
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative py-4">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-0">
+          <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="./shop.html">SHOP</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./dropupdates.html">DROP UPDATES</a></li>
+          <li class="nav-item"><a class="nav-link" href="./orderfaq.html">ORDERS FAQS</a></li>
+        </ul>
+      </div>
+
+      <!-- Login / Signup จะถูก auth.js เปลี่ยนตามสถานะ Login -->
+      <ul class="navbar-nav ms-0" id="authMenu">
+        <li class="nav-item"><a class="nav-link" href="/login">LOGIN</a></li>
+        <li class="nav-item"><a class="nav-link" href="/signup">SIGN UP</a></li>
+      </ul>
+
+      <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="./assets/firc.png.avif">
+        <img src="./assets/firc.png.avif" alt="Fricshop Logo" width="150" height="75">
+      </a>
+    </div>
+  </nav>
+
+  <!-- minibar -->
+  <div class="bg-dark text-white text-center py-2">
+    International orders may be subject to local customs duties or import taxes upon delivery.
+  </div>
+
+  <div class="drop-updates-card">
+    <h1 class="drop-title">DROP UPDATES</h1>
+
+    <div class="drop-image-wrap">
+      <img src="./assets/images.png" alt="Fric sleeping" class="drop-image">
+    </div>
+
+    <p class="drop-desc">
+      Sign up for Fric's adoption announcements,<br>
+      new friends, and news from the pond.
+    </p>
+
+    <label for="dropEmail" class="drop-label">Email</label>
+    <div class="drop-form">
+      <input type="email" id="dropEmail" class="drop-input" placeholder="Enter your email">
+      <button class="drop-btn">TELL ME WHEN</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 mb-3">
+        <h5 class="text-white">Fricshop</h5>
+        <p class="text-white">Made With love by Dric & The community</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5 class="text-white">Menu</h5>
+        <ul class="list-unstyled">
+          <li><a href="./index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="./shop.html" class="text-white text-decoration-none">Shop</a></li>
+          <li><a href="./dropupdates.html" class="text-white text-decoration-none">Drop Updates</a></li>
+          <li><a href="./orderfaq.html" class="text-white text-decoration-none">Orders FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5 class="text-white">Contact</h5>
+        <p class="text-white">Email: support@fricshop.com</p>
+        <div>
+          <a href="https://www.instagram.com/fric_thefrog/?hl=en" class="text-white me-3">Instagram</a>
+          <a href="https://www.tiktok.com/@fric_thefrog" class="text-white">TikTok</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+
+    <p class="text-center mb-0 text-white">2026 Fricshop.com All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/vendor/bootstrap.bundle.min.js"></script>
+<script src="/js/auth.js"></script>
+
+</body>
+</html>

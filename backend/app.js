@@ -84,6 +84,14 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../index.html"));
 });
 
+app.get("/dropupdates", (req, res) => {
+    res.redirect(301, "/dropupdates.html");
+});
+
+app.get("/orderfaq", (req, res) => {
+    res.redirect(301, "/orderfaq.html");
+});
+
 // เปิดให้เข้าถึงไฟล์ Frontend อื่น ๆ
 app.use(express.static(path.join(__dirname, "..")));
 

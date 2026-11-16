@@ -42,6 +42,10 @@ router.post("/signup", async (req, res) => {
 
         const cleanEmail = email.toLowerCase().trim();
 
+        if (!/^[^\s@]+@gmail\.com$/.test(cleanEmail)) {
+            return res.status(400).send("Only @gmail.com email addresses are allowed");
+        }
+
         // ตรวจสอบ Email ซ้ำ
         const existingUser = await User.findOne({
             email: cleanEmail
@@ -87,9 +91,15 @@ router.post("/login", async (req, res) => {
             return res.send("Please enter email and password");
         }
 
+        const cleanEmail = email.toLowerCase().trim();
+
+        if (!/^[^\s@]+@gmail\.com$/.test(cleanEmail)) {
+            return res.status(400).send("Only @gmail.com email addresses are allowed");
+        }
+
         // ค้นหาสมาชิกด้วย Email
         const user = await User.findOne({
-            email: email.toLowerCase().trim()
+            email: cleanEmail
         });
 
         if (!user) {

@@ -20,6 +20,9 @@ router.post("/track", async (req, res) => {
         // ดึง IP Address ของผู้เข้าชม
         let ipAddress = req.ip;
 
+console.log("Visitor IP:", req.ip);
+console.log("Forwarded IP:", req.headers["x-forwarded-for"]);
+
         // จัดรูปแบบ IPv6 localhost ให้เป็น IPv4
         if (ipAddress === "::1") {
             ipAddress = "127.0.0.1";

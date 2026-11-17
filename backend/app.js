@@ -7,6 +7,7 @@ const session = require("express-session");
 require("dotenv").config();
 
 const app = express();
+app.set("trust proxy", 1);
 
 // อ่านข้อมูลจาก Form และ JSON
 app.use(express.urlencoded({ extended: true }));

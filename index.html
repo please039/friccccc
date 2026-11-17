@@ -162,6 +162,21 @@
 <!-- JavaScript -->
 <script src="/vendor/bootstrap.bundle.min.js"></script>
 <script src="/js/auth.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        const response = await fetch("/visitors/track", {
+            method: "POST"
+        });
 
+        const data = await response.json();
+
+        console.log("Visitor Counter:", data);
+
+    } catch (error) {
+        console.error("Visitor Counter Error:", error);
+    }
+});
+</script>
 </body>
 </html>

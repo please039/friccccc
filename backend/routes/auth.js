@@ -20,7 +20,7 @@ router.get("/signup", (req, res) => {
     res.render("signup");
 });
 
-// สมัครสมาชิก
+// ระบบสมัครสมาชิก
 router.post("/signup", async (req, res) => {
     try {
         const { name, email, password, confirmPassword } = req.body;

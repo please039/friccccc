@@ -45,6 +45,9 @@ app.use("/products", productRoutes);
 const orderRoutes = require("./routes/orders");
 app.use("/orders", orderRoutes);
 
+const visitorRoutes = require("./routes/visitors");
+app.use("/visitors", visitorRoutes);
+
 // ตรวจสอบสถานะ Login
 app.get("/api/auth/status", (req, res) => {
     if (req.session.userId) {

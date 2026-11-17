@@ -1,0 +1,7 @@
+> Waiting for VS Code to connect...
+[1m[7m[34m Copilot [0m [34mGenerating debug configuration...[0m
+[1m[7m[34m Copilot [0m [34mDebug session starting...[0m
+/Users/please/.nvm/versions/node/v26.1.0/bin/node ./app.js app.js
+
+MongoDB Connected!
+Server running at http://localhost:3000

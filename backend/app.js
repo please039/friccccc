@@ -45,7 +45,7 @@ app.use("/products", productRoutes);
 const orderRoutes = require("./routes/orders");
 app.use("/orders", orderRoutes);
 
-const visitorRoutes = require("./routes/visitors");
+const visitorRoutes = require("./routes/visitor");
 app.use("/visitors", visitorRoutes);
 
 // ตรวจสอบสถานะ Login

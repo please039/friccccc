@@ -31,7 +31,7 @@ router.post("/track", async (req, res) => {
         // เวลาปัจจุบัน
         const now = new Date();
 
-        // เพิ่มข้อมูลเฉพาะเมื่อ IP ที่ยังไม่มีในวันนี้
+        // เพิ่มข้อมูลเฉพาะเมื่อ IP นี้ยังไม่มีในวันนี้
         const result = await Visitor.updateOne(
             {
                 ipAddress: ipAddress,
@@ -50,7 +50,7 @@ router.post("/track", async (req, res) => {
             }
         );
 
-        // ถ้ามีข้อมูลเดิมแล้ว จะอัปเดตเวลาเข้าล่าสุด
+        // ถ้ามีข้อมูลเดิมแล้ว ให้อัปเดตเวลาเข้าล่าสุด
         if (result.upsertedCount === 0) {
             await Visitor.updateOne(
                 {

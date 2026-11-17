@@ -70,7 +70,6 @@ router.post("/", requireAdmin, async (req, res) => {
     }
 });
 
-// ดูสินค้าทั้งหมด - ทุกคนเข้าดูได้
 router.get("/", async (req, res) => {
     try {
         const products = await Product.find();
@@ -87,25 +86,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// ดูสินค้ารายชิ้น - ทุกคนเข้าดูได้
-router.get("/:id", async (req, res) => {
-    try {
-        const product = await Product.findById(req.params.id);
 
-        if (!product) {
-            return res.status(404).json({
-                message: "Product not found"
-            });
-        }
-
-        res.json(product);
-
-    } catch (error) {
-        res.status(400).json({
-            message: error.message
-        });
-    }
-});
 
 // แก้ไขสินค้า - Admin เท่านั้น
 router.put("/:id", requireAdmin, async (req, res) => {

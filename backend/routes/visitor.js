@@ -17,13 +17,11 @@ function getBangkokDate() {
 // บันทึกผู้เข้าชมหน้า Home
 router.post("/track", async (req, res) => {
     try {
-        // ดึง IP Address ของผู้เข้าชม
+        // ดึง IP Address 
         let ipAddress = req.ip;
 
-console.log("Visitor IP:", req.ip);
-console.log("Forwarded IP:", req.headers["x-forwarded-for"]);
 
-        // จัดรูปแบบ IPv6 localhost ให้เป็น IPv4
+        //ให้เป็น IPv4
         if (ipAddress === "::1") {
             ipAddress = "127.0.0.1";
         }
@@ -53,7 +51,7 @@ console.log("Forwarded IP:", req.headers["x-forwarded-for"]);
             }
         );
 
-        // ถ้ามีข้อมูลเดิมแล้ว ให้อัปเดตเวลาเข้าล่าสุด
+        // ถ้ามีข้อมูลเดิมแล้ว ให้อัปเดตเวลาล่าสุดเข้าชม
         if (result.upsertedCount === 0) {
             await Visitor.updateOne(
                 {
